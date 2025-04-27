@@ -21,4 +21,5 @@ public class ProductoRopa extends Producto {
                 ", Medida: " + getMedida() +
                 ", Talla: " + talla;
     }
+
 }
