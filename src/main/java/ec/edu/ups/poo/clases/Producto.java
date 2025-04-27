@@ -29,14 +29,10 @@ public abstract class Producto {
     public UnidadDeMedida getMedida() {
         return medida;
     }
+    public abstract double calcularDescuento(double porcentaje);
 
-    public double calcularDescuento(double descuento) {
-        return precioUnitario - (precioUnitario * descuento / 100);
-    }
+    public abstract String imprimirDetalle();
 
-    public String imprimirDetalle() {
-        return "ID: " + id + ", Nombre: " + nombre + ", Precio: " + precioUnitario + ", Unidad: " + medida;
-    }
     @Override
     public String toString() {
         return "Producto{" +
