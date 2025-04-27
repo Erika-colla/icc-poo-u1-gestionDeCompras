@@ -1,6 +1,6 @@
 package ec.edu.ups.poo.enums;
 
-public enum unidadDeMedida {
+public enum UnidadDeMedida {
     TALLA,
     KILOGRAMO,
     LITRO,
