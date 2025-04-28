@@ -4,8 +4,8 @@ public class Departamento {
 
     private Empleado responsable;
 
-    public Departamento(int empleadoId, String empleadoNombre, String empleadoCargo, String empleadoTelefono) {
-        this.responsable = new Empleado(empleadoId, empleadoNombre, empleadoCargo, empleadoTelefono);
+    public Departamento(Empleado responsable) {
+        this.responsable = responsable;
     }
 
     public Empleado getResponsable() {
