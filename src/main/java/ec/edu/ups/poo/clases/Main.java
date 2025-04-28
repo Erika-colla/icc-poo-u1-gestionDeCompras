@@ -10,7 +10,7 @@ public class Main {
     private static List<Departamento> departamentos = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void menu(String[] args) {
         int opcion;
         do {
             System.out.println("===== SISTEMA DE GESTIÓN DE COMPRAS ERP =====");
@@ -279,6 +279,6 @@ public class Main {
 
             System.out.println();
 
-        } while (opcion!=15);
+        } while (opcion != 15);
     }
 }
