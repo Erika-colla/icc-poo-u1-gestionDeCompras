@@ -38,3 +38,4 @@ public class Proveedor {
                 ", telefono=" + telefono +
                 '}';
     }
+}
