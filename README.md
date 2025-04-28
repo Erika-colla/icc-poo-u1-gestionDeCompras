@@ -10,7 +10,7 @@
 ### 📌Erika Collaguazo
 ---
 
-El objetivo del proyecto de Gestión de Compras es facilitar la entrada y manejo de datos, evitando la necesidad de aplicar información manualmente, lo que resulta en un proceso más rápido y eficiente. En el cual se aplicaron el uso de dieferentes funciones como lo son clases hijas o herencias, clases abtractas, interfaces y enums.
+El objetivo del proyecto de Gestión de Compras es facilitar la entrada y manejo de datos, evitando la necesidad de aplicar información manualmente, lo que resulta en un proceso más rápido y eficiente. En el cual se aplicaron el uso de diferentes funciones como lo son clases hijas o herencias, clases abstractas, interfaces y enums.
 
 ---
 
@@ -70,8 +70,7 @@ Seleccione una opción:
 
 ## 🧰 Ejecutar
 
-1. **Para ejercutar el proyecto nos dirigimos al archivo **main.java.****  
-    Una vez que hayas terminado, sube los cambios al repositorio forkeado con los siguientes comandos:  
+1. **Para ejecutar el proyecto nos dirigimos al archivo **main.java.****  
     ```bash
     javac Main.java
     ```
