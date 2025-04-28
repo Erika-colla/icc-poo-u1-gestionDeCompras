@@ -23,9 +23,9 @@ public class Main {
             System.out.println("7. Buscar proveedor por RUC");
             System.out.println("8. Buscar producto por nombre");
             System.out.println("9. Buscar solicitud por número");
-            System.out.println("13. Aprobar / Rechazar solicitud de compra");
-            System.out.println("14. Calcular total de una solicitud");
-            System.out.println("15. Salir");
+            System.out.println("10. Aprobar / Rechazar solicitud de compra");
+            System.out.println("11. Calcular total de una solicitud");
+            System.out.println("12. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine();
@@ -230,7 +230,7 @@ public class Main {
                     }
                     break;
 
-                case 13:
+                case 10:
                     System.out.print("Ingrese número de solicitud: ");
                     String numAprobar = scanner.nextLine();
                     for (SolicitudDeCompra s : solicitudes) {
@@ -253,7 +253,7 @@ public class Main {
                     }
                     break;
 
-                case 14:
+                case 11:
                     System.out.print("Ingrese número de solicitud: ");
                     String numTotal = scanner.nextLine();
                     for (SolicitudDeCompra s : solicitudes) {
@@ -268,7 +268,7 @@ public class Main {
                     }
                     break;
 
-                case 15:
+                case 12:
                     System.out.println("Saliendo del sistema...");
                     break;
 
@@ -279,6 +279,6 @@ public class Main {
 
             System.out.println();
 
-        } while (opcion!=15);
+        } while (opcion!=12);
     }
 }
