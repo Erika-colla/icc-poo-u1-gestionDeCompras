@@ -46,4 +46,32 @@ public class SolicitudDeCompra {
     public Departamento getDepartamento() {
         return departamento;
     }
+
+    public void agrgarDetalle(DetalleCompra detalle) {
+        this.detalles.add(detalle);
+    }
+
+    public void aprobar() {
+        this.estado = EstadoSolicitud.APROBADO;
+    }
+
+    public void rechazar() {
+        this.estado = EstadoSolicitud.RECHAZADO;
+    }
+
+    public void actualizarEstado(EstadoSolicitud nuevoEstado) {
+        this.estado = nuevoEstado;
+    }
+
+    public void imprimir() {
+        System.out.println( "SolicitudDeCompra{" +
+                "id=" + id +
+                ", fechaEmision=" + fechaEmision +
+                ", numero='" + numero + '\'' +
+                ", departamento=" + departamento +
+                ", estado=" + estado +
+                ", detalles=" + detalles +
+                '}'
+        );
+    }
 }
