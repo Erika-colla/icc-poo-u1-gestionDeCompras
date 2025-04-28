@@ -10,7 +10,7 @@ public class SolicitudDeCompra {
     private String numero;
     private Departamento departamento;
     private EstadoSolicitud estado;
-    private List<DetalleCompra> detalles;  // Asegúrate de que esto sea List<DetalleCompra>
+    private List<DetalleCompra> detalles;
 
     public SolicitudDeCompra(int id, List<DetalleCompra> detalles, EstadoSolicitud estado, String numero, GregorianCalendar fechaEmision) {
         this.id = id;
