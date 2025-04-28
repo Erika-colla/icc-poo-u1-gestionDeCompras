@@ -15,7 +15,8 @@ El objetivo del proyecto de Gestión de Compras es facilitar la entrada y manejo
 ---
 
 ## 📈 Estructura del Proyecto
-![Captura de pantalla 2025-04-27 164555](https://github.com/user-attachments/assets/ce5463be-8164-4ea6-a4df-9c497a90a039)
+![image](https://github.com/user-attachments/assets/73ec1fc3-8593-43d5-8f77-b2699b864f7e)
+
 
 
 ### Explicación general de cada clase 
@@ -75,6 +76,4 @@ Seleccione una opción:
     javac Main.java
     ```
 
-5. **Resultados esperados**  
-    
 
