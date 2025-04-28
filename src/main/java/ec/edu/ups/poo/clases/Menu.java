@@ -28,7 +28,7 @@ public class Menu {
             System.out.println("15. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // limpiar buffer
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -280,5 +280,5 @@ public class Menu {
             System.out.println();
 
         } while (opcion!=15);
-    }
+}
 }
