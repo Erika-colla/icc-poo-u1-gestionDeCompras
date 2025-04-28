@@ -15,7 +15,8 @@ El objetivo del proyecto de Gestión de Compras es facilitar la entrada y manejo
 ---
 
 ## 📈 Estructura del Proyecto
-![image](https://github.com/user-attachments/assets/73ec1fc3-8593-43d5-8f77-b2699b864f7e)
+![Captura de pantalla 2025-04-28 042053](https://github.com/user-attachments/assets/33a4a44d-cf96-4b19-bd6a-00c15c5b3478)
+
 
 
 
