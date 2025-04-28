@@ -1,8 +1,6 @@
 package ec.edu.ups.poo.clases;
 
 import ec.edu.ups.poo.enums.EstadoSolicitud;
-
-
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -12,15 +10,19 @@ public class SolicitudDeCompra {
     private String numero;
     private Departamento departamento;
     private EstadoSolicitud estado;
-    private List<DetalleCompra> detalles;
+    private List<DetalleCompra> detalles;  // Asegúrate de que esto sea List<DetalleCompra>
 
-    public SolicitudDeCompra(int id, List detalles, EstadoSolicitud estado, Departamento departamento, String numero, GregorianCalendar fechaEmision) {
+    public SolicitudDeCompra(int id, List<DetalleCompra> detalles, EstadoSolicitud estado, String numero, GregorianCalendar fechaEmision) {
         this.id = id;
         this.detalles = detalles;
         this.estado = estado;
-        this.departamento = departamento;
+        this.departamento = null;
         this.numero = numero;
         this.fechaEmision = fechaEmision;
+    }
+
+    public List<DetalleCompra> getList() {
+        return detalles;
     }
 
     public int getId() {
@@ -37,10 +39,6 @@ public class SolicitudDeCompra {
 
     public EstadoSolicitud getEstado() {
         return estado;
-    }
-
-    public List getList() {
-        return detalles;
     }
 
     public Departamento getDepartamento() {
@@ -74,4 +72,10 @@ public class SolicitudDeCompra {
                 '}'
         );
     }
+
+    public double calcularTotal() {
+
+        return 0;
+    }
 }
+

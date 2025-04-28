@@ -6,7 +6,7 @@ public class Proveedor {
     private String direccion;
     private int telefono;
 
-    public Proveedor(String nombre, int ruc, String direccion, int telefono) {
+    public Proveedor(int ruc, String direccion) {
         this.nombre = nombre;
         this.ruc = ruc;
         this.direccion = direccion;
@@ -17,16 +17,32 @@ public class Proveedor {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public int getRuc() {
         return ruc;
+    }
+
+    public void setRuc(int ruc) {
+        this.ruc = ruc;
     }
 
     public String getDireccion() {
         return direccion;
     }
 
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     public int getTelefono() {
         return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 
     @Override
@@ -37,5 +53,9 @@ public class Proveedor {
                 ", direccion='" + direccion + '\'' +
                 ", telefono=" + telefono +
                 '}';
+    }
+
+    public int getId() {
+        return 0;
     }
 }

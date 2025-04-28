@@ -1,14 +1,12 @@
 package ec.edu.ups.poo.clases;
 
-import ec.edu.ups.poo.enums.UnidadDeMedida;
-
 import java.util.GregorianCalendar;
 
 public class ProductoAlimento extends Producto {
     private GregorianCalendar fechaExpiracion;
 
-    public ProductoAlimento(int id, String nombre, double precioUnitario, UnidadDeMedida medida, GregorianCalendar fechaExpiracion) {
-        super(id, nombre, precioUnitario, medida);
+    public ProductoAlimento(int id, String nombre, double precioUnitario) {
+        super(id, nombre, precioUnitario);
         this.fechaExpiracion = fechaExpiracion;
     }
 
@@ -21,7 +19,6 @@ public class ProductoAlimento extends Producto {
     public String imprimirDetalle() {
         return "ID: " + getId() + ", Nombre: " + getNombre() +
                 ", Precio: " + getPrecioUnitario() +
-                ", Medida: " + getMedida() +
                 ", Fecha de Expiración: " + fechaExpiracion.getTime();
     }
 }
