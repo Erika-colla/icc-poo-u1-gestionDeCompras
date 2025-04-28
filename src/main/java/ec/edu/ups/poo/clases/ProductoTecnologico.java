@@ -1,12 +1,15 @@
 package ec.edu.ups.poo.clases;
 
+import ec.edu.ups.poo.enums.UnidadDeMedida;
+
 public class ProductoTecnologico extends Producto {
 
     private int garantia;
 
-    public ProductoTecnologico(int id, String nombre, double precioUnitario) {
-        super(id, nombre, precioUnitario);
+    public ProductoTecnologico(int id, String nombre, double precioUnitario, UnidadDeMedida medida) {
+        super(id, nombre, precioUnitario, medida);
     }
+
 
     public int getGarantia() {
         return garantia;
@@ -14,13 +17,15 @@ public class ProductoTecnologico extends Producto {
 
     @Override
     public double calcularDescuento(double porcentaje) {
-        return getPrecioUnitario() - (getPrecioUnitario() * porcentaje / 100);
+        return getPrecioUnitario()-(getPrecioUnitario()*porcentaje/100);
     }
 
     @Override
     public String imprimirDetalle() {
         return "ID: " + getId() + ", Nombre: " + getNombre() +
                 ", Precio: " + getPrecioUnitario() +
-                (garantia > 0 ? ", Garantía: " + garantia + " meses" : "");
+                ", Medida: " + getMedida() +
+                ", Garantía: " + garantia;
     }
+
 }
