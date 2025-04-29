@@ -12,4 +12,10 @@ public class Departamento {
         return responsable;
     }
 
+    @Override
+    public String toString() {
+        return "Departamento{" +
+                "responsable=" + responsable +
+                '}';
+    }
 }

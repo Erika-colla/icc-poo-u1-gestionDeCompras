@@ -66,7 +66,7 @@ public class SolicitudDeCompra {
     public void imprimir() {
         System.out.println( "SolicitudDeCompra{" +
                 "id=" + id +
-                ", fechaEmision=" + fechaEmision +
+                ", fechaEmision =" + fechaEmision.getTime() +
                 ", numero='" + numero + '\'' +
                 ", departamento=" + departamento +
                 ", estado=" + estado +
