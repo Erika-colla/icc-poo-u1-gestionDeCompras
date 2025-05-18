@@ -1,6 +1,8 @@
 package ec.edu.ups.poo.clases;
 import ec.edu.ups.poo.enums.EstadoSolicitud;
 import ec.edu.ups.poo.enums.UnidadDeMedida;
+import ec.edu.ups.poo.modelo.GestionDeComprasModelo;
+import ec.edu.ups.poo.vista.VentanaPrincipal;
 
 import java.util.*;
 public class Main {
@@ -11,6 +13,8 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        GestionDeComprasModelo model = new GestionDeComprasModelo();
+        VentanaPrincipal ventana= new VentanaPrincipal("Sistema de Gestión de Compras", model);
         int opcion;
         do {
             System.out.println("===== SISTEMA DE GESTIÓN DE COMPRAS ERP =====");
