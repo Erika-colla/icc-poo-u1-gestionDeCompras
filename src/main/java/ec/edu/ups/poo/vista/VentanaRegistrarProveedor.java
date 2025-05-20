@@ -117,7 +117,7 @@ public class VentanaRegistrarProveedor extends Frame implements ActionListener {
             campoDireccion.setText("");
             campoTelefono.setText("");
 
-        } else if (command.equals("Cerrar Ventana ")) {
+        } else if (command.equals("Cerrar Ventana")) {
             setVisible(false);
         }
     }

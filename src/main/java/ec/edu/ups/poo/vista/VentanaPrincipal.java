@@ -8,8 +8,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-
-
 public class VentanaPrincipal extends Frame implements ActionListener {
 
     private GestionDeComprasModelo modelo;
@@ -97,7 +95,8 @@ public class VentanaPrincipal extends Frame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
 
-        if (command.equals("1. Registrar proveedor ")) {
+        // **CORRECCIÓN AQUÍ: ELIMINADO EL ESPACIO AL FINAL**
+        if (command.equals("1. Registrar proveedor")) {
             VentanaRegistrarProveedor ventana = new VentanaRegistrarProveedor("Registrar Proveedor", modelo);
             ventana.setVisible(true);
         }
@@ -137,5 +136,4 @@ public class VentanaPrincipal extends Frame implements ActionListener {
             System.exit(0);
         }
     }
-
 }
