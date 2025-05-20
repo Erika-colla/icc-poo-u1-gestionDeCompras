@@ -38,7 +38,7 @@ public class VentanaPrincipal extends Frame implements ActionListener {
         setLayout(new BorderLayout());
 
         panelMenuPrincipal = new Panel();
-        panelMenuPrincipal.setLayout(new GridLayout(6, 2, 10, 10));
+        panelMenuPrincipal.setLayout(new GridLayout(6, 2));
 
         botonRegistrarProveedor = new Button("1. Registrar proveedor");
         botonRegistrarProducto = new Button("2. Registrar producto");
@@ -101,37 +101,38 @@ public class VentanaPrincipal extends Frame implements ActionListener {
             VentanaRegistrarProveedor ventana = new VentanaRegistrarProveedor("Registrar Proveedor", modelo);
             ventana.setVisible(true);
         }
-//        else if (command.equals("2. Registrar producto")) {
-//            VentanaRegistrarProducto ventana = new VentanaRegistrarProducto("Registrar Producto", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("3. Registrar solicitud")) {
-//            VentanaRegistrarSolicitud ventana = new VentanaRegistrarSolicitud("Registrar Solicitud", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("4. Listar proveedores")) {
-//            VentanaListarProveedores ventanaLista = new VentanaListarProveedores("Listar Proveedores", modelo);
-//            ventanaLista.setVisible(true);
-//        } else if (command.equals("5. Listar productos")) {
-//            VentanaListarProductos ventana = new VentanaListarProductos("Listar Productos", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("6. Listar solicitudes")) {
-//            VentanaListarSolicitudes ventana = new VentanaListarSolicitudes("Listar Solicitudes", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("7. Buscar proveedor")) {
-//            VentanaBuscarProveedor ventana = new VentanaBuscarProveedor("Buscar Proveedor", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("8. Buscar producto")) {
-//            VentanaBuscarProducto ventana = new VentanaBuscarProducto("Buscar Producto", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("9. Buscar solicitud")) {
-//            VentanaBuscarSolicitud ventana = new VentanaBuscarSolicitud("Buscar Solicitud", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("10. Aprobar/Rechazar")) {
-//            VentanaSolicitud ventana = new VentanaSolicitud("Aprobar / Rechazar Solicitud", modelo);
-//            ventana.setVisible(true);
-//        } else if (command.equals("11. Calcular total")) {
-//            VentanaCalcularTotal ventana = new VentanaCalcularTotal("Calcular Total Solicitud", modelo);
-//            ventana.setVisible(true);
-//        }
+        else if (command.equals("2. Registrar producto")) {
+            VentanaRegistrarProducto ventana = new VentanaRegistrarProducto("Registrar Producto", modelo);
+            ventana.setVisible(true);
+        }
+        else if (command.equals("3. Registrar solicitud")) {
+            VentanaRegistrarSolicitud ventana = new VentanaRegistrarSolicitud("Registrar Solicitud", modelo);
+            ventana.setVisible(true);
+        } else if (command.equals("4. Listar proveedores")) {
+            VentanaListarProveedores ventanaLista = new VentanaListarProveedores("Listar Proveedores", modelo);
+            ventanaLista.setVisible(true);
+        } else if (command.equals("5. Listar productos")) {
+            VentanaListarProductos ventana = new VentanaListarProductos("Listar Productos", modelo);
+            ventana.setVisible(true);
+        } else if (command.equals("6. Listar solicitudes")) {
+            VentanaListarSolicitudes ventana = new VentanaListarSolicitudes("Listar Solicitudes", modelo);
+            ventana.setVisible(true);
+        } else if (command.equals("7. Buscar proveedor")) {
+            VentanaBuscarProveedor ventana = new VentanaBuscarProveedor("Buscar Proveedor", modelo);
+            ventana.setVisible(true);
+        } else if (command.equals("8. Buscar producto")) {
+            VentanaBuscarProducto ventana = new VentanaBuscarProducto("Buscar Producto", modelo);
+            ventana.setVisible(true);
+        } else if (command.equals("9. Buscar solicitud")) {
+            VentanaBuscarSolicitud ventana = new VentanaBuscarSolicitud("Buscar Solicitud", modelo);
+            ventana.setVisible(true);
+        } else if (command.equals("10. Aprobar/Rechazar")) {
+            VentanaSolicitud ventana = new VentanaSolicitud("Aprobar / Rechazar Solicitud", modelo);
+            ventana.setVisible(true);
+        } else if (command.equals("11. Calcular total")) {
+            VentanaCalcularTotal ventana = new VentanaCalcularTotal("Calcular Total Solicitud", modelo);
+            ventana.setVisible(true);
+        }
         else if (command.equals("12. Salir")) {
             System.exit(0);
         }
