@@ -24,7 +24,7 @@ public class VentanaListarProductos extends Frame implements ActionListener {
 
         areaListadoProductos = new TextArea("Listado de Productos...", 15, 60, TextArea.SCROLLBARS_VERTICAL_ONLY);
         areaListadoProductos.setEditable(false);
-        add(areaListadoProductos, BorderLayout.CENTER);
+        add(areaListadoProductos, BorderLayout.CENTER );
 
         Panel panelBotones = new Panel(new FlowLayout(FlowLayout.CENTER));
         botonRegresar = new Button("Regresar");

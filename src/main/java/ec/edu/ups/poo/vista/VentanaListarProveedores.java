@@ -16,7 +16,7 @@ public class VentanaListarProveedores extends Frame implements ActionListener {
     private Button botonCerrar;
 
 
-    public VentanaListarProveedores(String title, GestionDeComprasModelo model) {
+    public VentanaListarProveedores(String title, GestionDeComprasModelo model ) {
         super(title);
         this.model = model;
 

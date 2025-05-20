@@ -87,9 +87,9 @@ public class Main {
                         ProductoTecnologico pt = new ProductoTecnologico(idProducto, nombreProducto, precio, medida);
                         productos.add(pt);
                     } else {
-                        System.out.println("Tipo inválido.");
+                        System.out.println("Tipo inválido. ");
                     }
-                    System.out.println("Producto registrado exitosamente.");
+                    System.out.println("Producto registrado exitosamente. ");
                     break;
 
                 case 3:

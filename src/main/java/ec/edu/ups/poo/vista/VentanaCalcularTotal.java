@@ -12,7 +12,7 @@ public class VentanaCalcularTotal extends Frame {
     public VentanaCalcularTotal(String title, GestionDeComprasModelo model) {
         super(title);
         this.model = model;
-        setSize(400, 200);
+        setSize(400, 200 );
 
         addWindowListener(new WindowAdapter() {
             @Override

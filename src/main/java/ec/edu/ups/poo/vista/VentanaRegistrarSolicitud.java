@@ -80,7 +80,7 @@ public class VentanaRegistrarSolicitud extends Frame implements ActionListener {
         panelFormulario.add(etiquetaIdProducto);
         panelFormulario.add(campoIdProducto);
 
-        etiquetaCantidadProducto = new Label("Cantidad Producto:");
+        etiquetaCantidadProducto = new Label("Cantidad Producto: ");
         campoCantidadProducto = new TextField(10);
         panelFormulario.add(etiquetaCantidadProducto);
         panelFormulario.add(campoCantidadProducto);

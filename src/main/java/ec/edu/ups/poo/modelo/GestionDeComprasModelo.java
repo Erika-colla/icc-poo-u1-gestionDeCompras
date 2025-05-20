@@ -120,7 +120,7 @@ public class GestionDeComprasModelo {
             Empleado empleado = new Empleado(idEmpleado, nombreEmpleado, cargoEmpleado, telefonoEmpleado);
             Departamento departamento = new Departamento(empleado);
             departamentos.add(departamento);
-            return departamento;
+            return departamento ;
         }
     }
 }

@@ -168,7 +168,7 @@ public class VentanaRegistrarProducto extends Frame implements ActionListener, I
         add(panelBotones, BorderLayout.SOUTH);
 
 
-        setSize(500, 550);
+        setSize(500, 550 );
         setVisible(true);
 
         addWindowListener(new WindowAdapter() {

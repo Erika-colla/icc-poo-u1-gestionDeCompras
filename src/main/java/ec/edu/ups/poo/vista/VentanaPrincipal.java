@@ -97,7 +97,7 @@ public class VentanaPrincipal extends Frame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
 
-        if (command.equals("1. Registrar proveedor")) {
+        if (command.equals("1. Registrar proveedor ")) {
             VentanaRegistrarProveedor ventana = new VentanaRegistrarProveedor("Registrar Proveedor", modelo);
             ventana.setVisible(true);
         }

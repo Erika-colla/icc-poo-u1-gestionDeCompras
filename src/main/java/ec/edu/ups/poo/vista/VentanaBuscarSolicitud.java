@@ -13,7 +13,7 @@ public class VentanaBuscarSolicitud extends Frame implements ActionListener {
 
     private GestionDeComprasModelo modelo;
 
-    private Label etiquetaNumero;
+    private Label etiquetaNumero ;
     private TextField campoNumero;
     private Button botonBuscar;
     private TextArea areaResultado;
