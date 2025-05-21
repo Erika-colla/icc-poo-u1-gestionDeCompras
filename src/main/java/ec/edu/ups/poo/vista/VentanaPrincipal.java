@@ -12,8 +12,9 @@ public class VentanaPrincipal extends Frame implements ActionListener {
 
     private GestionDeComprasModelo modelo;
 
+    private Panel panelContenedorPrincipal;
+    private Panel panelTitulo;
     private Panel panelMenuPrincipal;
-
 
     private Button botonRegistrarProveedor;
     private Button botonRegistrarProducto;
@@ -28,27 +29,40 @@ public class VentanaPrincipal extends Frame implements ActionListener {
     private Button botonCalcularTotal;
     private Button botonSalir;
 
-
     public VentanaPrincipal(String title, GestionDeComprasModelo modelo) {
         super(title);
         this.modelo = modelo;
 
-        setLayout(new BorderLayout());
+        setBackground(new Color(255, 255, 204));
+        setLayout(new BorderLayout(10, 10));
+
+        panelContenedorPrincipal = new Panel();
+        panelContenedorPrincipal.setLayout(new BorderLayout(10, 10));
+        panelContenedorPrincipal.setBackground(new Color(255, 255, 204));
+
+        panelTitulo = new Panel();
+        panelTitulo.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        Label tituloLabel = new Label("Sistema 'Gestión de Compras'");
+        tituloLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        panelTitulo.add(tituloLabel);
+        panelContenedorPrincipal.add(panelTitulo, BorderLayout.NORTH);
 
         panelMenuPrincipal = new Panel();
-        panelMenuPrincipal.setLayout(new GridLayout(6, 2));
+        panelMenuPrincipal.setLayout(new GridLayout(6, 2, 10, 10));
+        panelMenuPrincipal.setBackground(new Color(255, 255, 204));
 
         botonRegistrarProveedor = new Button("1. Registrar proveedor");
         botonRegistrarProducto = new Button("2. Registrar producto");
-        botonRegistrarSolicitud = new Button("3. Registrar solicitud");
+        botonRegistrarSolicitud = new Button("3. Registrar solicitud de compra");
         botonListarProveedores = new Button("4. Listar proveedores");
         botonListarProductos = new Button("5. Listar productos");
-        botonListarSolicitudes = new Button("6. Listar solicitudes");
-        botonBuscarProveedor = new Button("7. Buscar proveedor");
-        botonBuscarProducto = new Button("8. Buscar producto");
-        botonBuscarSolicitud = new Button("9. Buscar solicitud");
-        botonManejarSolicitud = new Button("10. Aprobar/Rechazar");
-        botonCalcularTotal = new Button("11. Calcular total");
+        botonListarSolicitudes = new Button("6. Listar solicitudes de compra");
+        botonBuscarProveedor = new Button("7. Buscar proveedor por ID");
+        botonBuscarProducto = new Button("8. Buscar producto por nombre");
+        botonBuscarSolicitud = new Button("9. Buscar solicitud por número");
+        botonManejarSolicitud = new Button("10. Aprobar / Rechazar solicitud de compra");
+        botonCalcularTotal = new Button("11. Calcular total de una solicitud");
         botonSalir = new Button("12. Salir");
 
         botonRegistrarProveedor.addActionListener(this);
@@ -77,10 +91,11 @@ public class VentanaPrincipal extends Frame implements ActionListener {
         panelMenuPrincipal.add(botonCalcularTotal);
         panelMenuPrincipal.add(botonSalir);
 
-        add(panelMenuPrincipal, BorderLayout.CENTER);
+        panelContenedorPrincipal.add(panelMenuPrincipal, BorderLayout.CENTER);
+        add(panelContenedorPrincipal, BorderLayout.CENTER);
 
-
-        setSize(400, 300);
+        setSize(550, 400);
+        setResizable(false);
         setVisible(true);
 
         addWindowListener(new WindowAdapter() {
@@ -95,7 +110,6 @@ public class VentanaPrincipal extends Frame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
 
-        // **CORRECCIÓN AQUÍ: ELIMINADO EL ESPACIO AL FINAL**
         if (command.equals("1. Registrar proveedor")) {
             VentanaRegistrarProveedor ventana = new VentanaRegistrarProveedor("Registrar Proveedor", modelo);
             ventana.setVisible(true);
@@ -104,7 +118,7 @@ public class VentanaPrincipal extends Frame implements ActionListener {
             VentanaRegistrarProducto ventana = new VentanaRegistrarProducto("Registrar Producto", modelo);
             ventana.setVisible(true);
         }
-        else if (command.equals("3. Registrar solicitud")) {
+        else if (command.equals("3. Registrar solicitud de compra")) {
             VentanaRegistrarSolicitud ventana = new VentanaRegistrarSolicitud("Registrar Solicitud", modelo);
             ventana.setVisible(true);
         } else if (command.equals("4. Listar proveedores")) {
@@ -113,22 +127,22 @@ public class VentanaPrincipal extends Frame implements ActionListener {
         } else if (command.equals("5. Listar productos")) {
             VentanaListarProductos ventana = new VentanaListarProductos("Listar Productos", modelo);
             ventana.setVisible(true);
-        } else if (command.equals("6. Listar solicitudes")) {
+        } else if (command.equals("6. Listar solicitudes de compra")) {
             VentanaListarSolicitudes ventana = new VentanaListarSolicitudes("Listar Solicitudes", modelo);
             ventana.setVisible(true);
-        } else if (command.equals("7. Buscar proveedor")) {
+        } else if (command.equals("7. Buscar proveedor por ID")) {
             VentanaBuscarProveedor ventana = new VentanaBuscarProveedor("Buscar Proveedor", modelo);
             ventana.setVisible(true);
-        } else if (command.equals("8. Buscar producto")) {
+        } else if (command.equals("8. Buscar producto por nombre")) {
             VentanaBuscarProducto ventana = new VentanaBuscarProducto("Buscar Producto", modelo);
             ventana.setVisible(true);
-        } else if (command.equals("9. Buscar solicitud")) {
+        } else if (command.equals("9. Buscar solicitud por número")) {
             VentanaBuscarSolicitud ventana = new VentanaBuscarSolicitud("Buscar Solicitud", modelo);
             ventana.setVisible(true);
-        } else if (command.equals("10. Aprobar/Rechazar")) {
+        } else if (command.equals("10. Aprobar / Rechazar solicitud de compra")) {
             VentanaSolicitud ventana = new VentanaSolicitud("Aprobar / Rechazar Solicitud", modelo);
             ventana.setVisible(true);
-        } else if (command.equals("11. Calcular total")) {
+        } else if (command.equals("11. Calcular total de una solicitud")) {
             VentanaCalcularTotal ventana = new VentanaCalcularTotal("Calcular Total Solicitud", modelo);
             ventana.setVisible(true);
         }
