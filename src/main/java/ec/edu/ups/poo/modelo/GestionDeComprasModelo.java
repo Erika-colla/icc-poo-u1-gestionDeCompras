@@ -1,9 +1,14 @@
 package ec.edu.ups.poo.modelo;
 
 import ec.edu.ups.poo.clases.*;
+import ec.edu.ups.poo.enums.EstadoSolicitud;
+import ec.edu.ups.poo.enums.UnidadDeMedida;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+import java.util.Optional;
 
 public class GestionDeComprasModelo {
     private List<Proveedor> proveedores;
@@ -12,10 +17,10 @@ public class GestionDeComprasModelo {
     private List<Departamento> departamentos;
 
     public GestionDeComprasModelo() {
-        proveedores = new ArrayList<>();
-        productos = new ArrayList<>();
-        solicitudes = new ArrayList<>();
-        departamentos = new ArrayList<>();
+        this.proveedores = new ArrayList<>();
+        this.productos = new ArrayList<>();
+        this.solicitudes = new ArrayList<>();
+        this.departamentos = new ArrayList<>();
     }
 
     public void addProveedor(Proveedor proveedor) {
@@ -89,9 +94,13 @@ public class GestionDeComprasModelo {
         SolicitudDeCompra solicitud = findSolicitudByNumero(numeroSolicitud);
         if (solicitud != null) {
             double total = 0;
-            if (solicitud.getList() != null) {
-                for (DetalleCompra d : (List<DetalleCompra>) solicitud.getList()) {
-                    total += d.calcularTotal();
+            List detallesGenericos = solicitud.getList();
+            if (detallesGenericos != null) {
+                for (Object obj : detallesGenericos) {
+                    if (obj instanceof DetalleCompra) {
+                        DetalleCompra d = (DetalleCompra) obj;
+                        total += d.calcularTotal();
+                    }
                 }
             }
             return total;

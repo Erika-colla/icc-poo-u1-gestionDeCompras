@@ -1,7 +1,6 @@
 package ec.edu.ups.poo.vista;
 
 import ec.edu.ups.poo.modelo.GestionDeComprasModelo;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -113,12 +112,10 @@ public class VentanaPrincipal extends Frame implements ActionListener {
         if (command.equals("1. Registrar proveedor")) {
             VentanaRegistrarProveedor ventana = new VentanaRegistrarProveedor("Registrar Proveedor", modelo);
             ventana.setVisible(true);
-        }
-        else if (command.equals("2. Registrar producto")) {
+        } else if (command.equals("2. Registrar producto")) {
             VentanaRegistrarProducto ventana = new VentanaRegistrarProducto("Registrar Producto", modelo);
             ventana.setVisible(true);
-        }
-        else if (command.equals("3. Registrar solicitud de compra")) {
+        } else if (command.equals("3. Registrar solicitud de compra")) {
             VentanaRegistrarSolicitud ventana = new VentanaRegistrarSolicitud("Registrar Solicitud", modelo);
             ventana.setVisible(true);
         } else if (command.equals("4. Listar proveedores")) {
@@ -145,8 +142,7 @@ public class VentanaPrincipal extends Frame implements ActionListener {
         } else if (command.equals("11. Calcular total de una solicitud")) {
             VentanaCalcularTotal ventana = new VentanaCalcularTotal("Calcular Total Solicitud", modelo);
             ventana.setVisible(true);
-        }
-        else if (command.equals("12. Salir")) {
+        } else if (command.equals("12. Salir")) {
             System.exit(0);
         }
     }

@@ -49,6 +49,7 @@ public class VentanaRegistrarProveedor extends Frame implements ActionListener {
         campoNombre = new TextField(20);
         panelFormulario.add(etiquetaNombre);
         panelFormulario.add(campoNombre);
+        panelFormulario.setBackground(new Color(255, 255, 204));
 
         etiquetaRuc = new Label("RUC:");
         campoRuc = new TextField(20);
