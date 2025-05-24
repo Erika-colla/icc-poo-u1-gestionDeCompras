@@ -13,6 +13,7 @@ public class VentanaListarProveedores extends Frame implements ActionListener {
 
     private GestionDeComprasModelo model;
     private TextArea areaProveedores;
+    private Button botonActualizar; // Declaración del nuevo botón
     private Button botonCerrar;
 
 
@@ -30,12 +31,16 @@ public class VentanaListarProveedores extends Frame implements ActionListener {
         areaProveedores.setEditable(false);
         add(areaProveedores, BorderLayout.CENTER);
 
+        Panel panelBotones = new Panel(new FlowLayout(FlowLayout.CENTER));
+
+        botonActualizar = new Button("Actualizar Lista");
+        botonActualizar.addActionListener(this);
+        panelBotones.add(botonActualizar);
+
         botonCerrar = new Button("Cerrar Ventana");
         botonCerrar.addActionListener(this);
-
-        Panel panelBotonCerrar = new Panel(new FlowLayout(FlowLayout.CENTER));
-        panelBotonCerrar.add(botonCerrar);
-        add(panelBotonCerrar, BorderLayout.SOUTH);
+        panelBotones.add(botonCerrar);
+        add(panelBotones, BorderLayout.SOUTH);
 
 
         setSize(500, 300);
@@ -61,7 +66,7 @@ public class VentanaListarProveedores extends Frame implements ActionListener {
             areaProveedores.append("No hay proveedores registrados.");
         } else {
             for (Proveedor p : proveedores) {
-                areaProveedores.append(p.toString());
+                areaProveedores.append(p.toString() + "\n");
             }
         }
     }
@@ -70,7 +75,9 @@ public class VentanaListarProveedores extends Frame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
 
-        if (command.equals("Cerrar Ventana")) {
+        if (command.equals("Actualizar Lista")) {
+            cargarProveedores();
+        } else if (command.equals("Cerrar Ventana")) {
             setVisible(false);
         }
     }

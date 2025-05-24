@@ -27,6 +27,11 @@ public class VentanaListarProductos extends Frame implements ActionListener {
         add(areaListadoProductos, BorderLayout.CENTER );
 
         Panel panelBotones = new Panel(new FlowLayout(FlowLayout.CENTER));
+
+        botonActualizar = new Button("Actualizar Lista");
+        botonActualizar.addActionListener(this);
+        panelBotones.add(botonActualizar);
+
         botonRegresar = new Button("Regresar");
         botonRegresar.addActionListener(this);
         panelBotones.add(botonRegresar);
