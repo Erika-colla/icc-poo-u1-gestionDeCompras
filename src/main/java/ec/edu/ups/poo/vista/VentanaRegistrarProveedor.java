@@ -105,18 +105,23 @@ public class VentanaRegistrarProveedor extends Frame implements ActionListener {
             String direccion = campoDireccion.getText();
             String telefonoStr = campoTelefono.getText();
 
-            int ruc = Integer.parseInt(rucStr);
-            int telefono = Integer.parseInt(telefonoStr);
+            try {
+                int ruc = Integer.parseInt(rucStr);
+                int telefono = Integer.parseInt(telefonoStr);
+                int id = model.getProveedores().size() + 1;
 
-            Proveedor nuevoProveedor = new Proveedor(nombre, ruc, direccion, telefono);
-            model.addProveedor(nuevoProveedor);
+                Proveedor nuevoProveedor = new Proveedor(id, nombre, ruc, direccion, telefono);
+                model.addProveedor(nuevoProveedor);
 
-            areaMensajes.append("Proveedor registrado: " + nuevoProveedor.toString());
+                areaMensajes.append("Proveedor registrado: " + nuevoProveedor.toString());
 
-            campoNombre.setText("");
-            campoRuc.setText("");
-            campoDireccion.setText("");
-            campoTelefono.setText("");
+                campoNombre.setText("");
+                campoRuc.setText("");
+                campoDireccion.setText("");
+                campoTelefono.setText("");
+            } catch (NumberFormatException ex) {
+                areaMensajes.setText("Error: RUC y Teléfono deben ser números válidos.");
+            }
 
         } else if (command.equals("Cerrar Ventana")) {
             setVisible(false);
