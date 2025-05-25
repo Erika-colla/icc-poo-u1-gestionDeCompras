@@ -37,6 +37,8 @@ public class Main {
             switch (opcion) {
                 case 1:
                     System.out.println("===== Registrar Proveedor =====");
+                    System.out.print("Id: ");
+                    int id = scanner.nextInt();
                     System.out.print("Nombre: ");
                     String nombreProveedor = scanner.nextLine();
                     System.out.print("RUC: ");
@@ -47,7 +49,7 @@ public class Main {
                     System.out.print("Teléfono: ");
                     int telefono = scanner.nextInt();
                     scanner.nextLine();
-                    proveedores.add(new Proveedor(nombreProveedor, ruc, direccion, telefono));
+                    proveedores.add(new Proveedor(id, nombreProveedor, ruc, direccion, telefono));
                     System.out.println("Proveedor registrado exitosamente.");
                     break;
 
