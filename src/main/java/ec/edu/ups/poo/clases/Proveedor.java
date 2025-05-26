@@ -1,16 +1,22 @@
 package ec.edu.ups.poo.clases;
 
 public class Proveedor {
+    private int id;
     private String nombre;
     private int ruc;
     private String direccion;
     private int telefono;
 
-    public Proveedor(String nombre, int ruc, String direccion, int telefono) {
+    public Proveedor(int id, String nombre, int ruc, String direccion, int telefono) {
+        this.id = id;
         this.nombre = nombre;
         this.ruc = ruc;
         this.direccion = direccion;
         this.telefono = telefono;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getNombre() {
@@ -32,7 +38,8 @@ public class Proveedor {
     @Override
     public String toString() {
         return "Proveedor{" +
-                "nombre='" + nombre + '\'' +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
                 ", ruc=" + ruc +
                 ", direccion='" + direccion + '\'' +
                 ", telefono=" + telefono +

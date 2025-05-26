@@ -12,6 +12,10 @@ public class Departamento {
         return responsable;
     }
 
+    public void setResponsable(Empleado responsable) {
+        this.responsable = responsable;
+    }
+
     @Override
     public String toString() {
         return "Departamento{" +

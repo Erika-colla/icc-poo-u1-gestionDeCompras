@@ -1,6 +1,8 @@
 package ec.edu.ups.poo.clases;
 import ec.edu.ups.poo.enums.EstadoSolicitud;
 import ec.edu.ups.poo.enums.UnidadDeMedida;
+import ec.edu.ups.poo.modelo.GestionDeComprasModelo;
+import ec.edu.ups.poo.vista.VentanaPrincipal;
 
 import java.util.*;
 public class Main {
@@ -11,6 +13,8 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        GestionDeComprasModelo model = new GestionDeComprasModelo();
+        VentanaPrincipal ventana= new VentanaPrincipal("Sistema de Gestión de Compras", model);
         int opcion;
         do {
             System.out.println("===== SISTEMA DE GESTIÓN DE COMPRAS ERP =====");
@@ -33,6 +37,8 @@ public class Main {
             switch (opcion) {
                 case 1:
                     System.out.println("===== Registrar Proveedor =====");
+                    System.out.print("Id: ");
+                    int id = scanner.nextInt();
                     System.out.print("Nombre: ");
                     String nombreProveedor = scanner.nextLine();
                     System.out.print("RUC: ");
@@ -43,7 +49,7 @@ public class Main {
                     System.out.print("Teléfono: ");
                     int telefono = scanner.nextInt();
                     scanner.nextLine();
-                    proveedores.add(new Proveedor(nombreProveedor, ruc, direccion, telefono));
+                    proveedores.add(new Proveedor(id, nombreProveedor, ruc, direccion, telefono));
                     System.out.println("Proveedor registrado exitosamente.");
                     break;
 
@@ -83,9 +89,9 @@ public class Main {
                         ProductoTecnologico pt = new ProductoTecnologico(idProducto, nombreProducto, precio, medida);
                         productos.add(pt);
                     } else {
-                        System.out.println("Tipo inválido.");
+                        System.out.println("Tipo inválido. ");
                     }
-                    System.out.println("Producto registrado exitosamente.");
+                    System.out.println("Producto registrado exitosamente. ");
                     break;
 
                 case 3:
